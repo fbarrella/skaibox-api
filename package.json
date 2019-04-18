@@ -1,0 +1,13 @@
+{
+  "name": "api-skaibox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Felipe B. Netto <felipe.netto@mobiauto.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  }
+}
