@@ -10,8 +10,7 @@ const Box = new mongoose.Schema({
     }]
 },
 {
-    timestamps: true,
-    versionKey: true
+    timestamps: true
 });
 
 module.exports = mongoose.model('Box', Box);
