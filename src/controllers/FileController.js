@@ -13,6 +13,8 @@ class FileController {
         skaibox.files.push(newFile);
         await skaibox.save();
 
+        req.io.sockets.in(skaibox._id).emit("newFile", newFile);
+
         return res.json(newFile);
     }
 }
