@@ -1,2 +1,4 @@
 node_modules/
-src/configs/mongo_connection.js
+tmp/*
+!tmp/.gitkeep
+.env
