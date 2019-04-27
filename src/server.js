@@ -1,4 +1,5 @@
 const dotenv = require('dotenv').config();
+const favicon = require("serve-favicon");
 const express = require('express');
 const mongoose = require('./configs/mongo_connection');
 const app = express();
@@ -16,6 +17,7 @@ io.on('connection', socket => {
 });
 
 app.use(cors());
+app.use(favicon(path.resolve(__dirname, '..', 'favicon.ico')));
 app.use((req, res, next) => {
     req.io = io;
     return next();

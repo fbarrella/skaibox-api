@@ -1,12 +1,13 @@
 const express = require('express');
 const routes = express.Router();
 const multer = require("multer");
+const path = require("path");
 const multerConfig = require("./configs/multer");
 const BoxController = require("./controllers/BoxController");
 const FileController = require("./controllers/FileController");
 
 routes.get('/', (req, res)=>{
-    return res.send("<h2 style=\"font-family: sans-serif\">API is running!!</h2>");
+    return res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 // Skaibox CRUD
