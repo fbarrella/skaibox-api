@@ -5,6 +5,6 @@
 */
 
 const mongoose = require('mongoose');
-mongoose.connect('URL DO BANCO DE DADOS AQUI');
+mongoose.connect('URL DO BANCO DE DADOS AQUI', { useNewUrlParser: true });
 
 module.exports = mongoose;
