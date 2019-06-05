@@ -10,9 +10,13 @@ routes.get('/', (req, res)=>{
     return res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
+routes.get('/wakemydyno.txt', (req, res)=>{
+    return res.sendFile(path.resolve(__dirname, '..', 'wakemydyno.txt'));
+});
+
 // Skaibox CRUD
 routes.post('/skaibox', BoxController.store);
-routes.get('/skaibox/:id', BoxController.show);
+routes.get('/skaibox/:id', BoxController.show)
 
 // File management CRUD
 routes.post('/skaibox/:id/file', multer(multerConfig).single('file'), FileController.store);
